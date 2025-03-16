@@ -5,10 +5,16 @@ import { ErrorIcon } from "@/components/icons/Error";
 import { Toaster } from "sonner";
 import ReactQueryProvider from "@/components/ReactQueryProvider";
 import { domAnimation, LazyMotion } from "framer-motion";
-import 'lenis/dist/lenis.css'
+import "lenis/dist/lenis.css";
 import { useEffect } from "react";
+import { Tajawal } from "next/font/google";
 import Lenis from "lenis";
-
+const font = Tajawal({
+  weight: ["400", "500", "700", "800", "900"],
+  subsets: ["arabic"],
+  display: "swap",
+  variable: "--font-main-font",
+});
 export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
     const lenis = new Lenis();
@@ -44,8 +50,15 @@ export default function App({ Component, pageProps }: AppProps) {
           success: <CheckmarkIcon />,
         }}
       />
+      <style jsx global>{`
+        html {
+          font-family: ${font.style.fontFamily};
+        }
+      `}</style>
       <LazyMotion features={domAnimation} strict>
-        <Component {...pageProps} />
+        <div className={`${font.variable} font-main-font animate-fade`}>
+          <Component {...pageProps} />
+        </div>
       </LazyMotion>
     </ReactQueryProvider>
   );

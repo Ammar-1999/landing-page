@@ -1,6 +1,6 @@
 
 import type { Config } from "tailwindcss";
-
+import animate from "tailwindcss-animate"
 export default {
 	darkMode: ["class"],
 	content: [
@@ -21,6 +21,7 @@ export default {
 		extend: {
 			fontFamily: {
 				sans: ['Inter var', 'system-ui', 'sans-serif'],
+				"main-font": ["var(--font-main-font)"],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -75,6 +76,10 @@ export default {
 					'0%': { opacity: '0', transform: 'translateY(10px)' },
 					'100%': { opacity: '1', transform: 'translateY(0)' }
 				},
+				"fade" : {
+					'0%': { opacity: '0'},
+					'100%': { opacity: '1'}
+				},
 				'fade-out': {
 					'0%': { opacity: '1', transform: 'translateY(0)' },
 					'100%': { opacity: '0', transform: 'translateY(10px)' }
@@ -119,6 +124,7 @@ export default {
 				'fade-out': 'fade-out 0.3s ease-out',
 				'scale-in': 'scale-in 0.3s ease-out',
 				'scale-out': 'scale-out 0.2s ease-out',
+				'fade': 'fade 0.5s ease-out',
 				'slide-in-right': 'slide-in-right 0.5s ease-out',
 				'slide-in-left': 'slide-in-left 0.5s ease-out',
 				'slide-in-bottom': 'slide-in-bottom 0.5s ease-out',
@@ -128,5 +134,5 @@ export default {
 			}
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [animate],
 } satisfies Config;
