@@ -52,7 +52,7 @@ const Navbar = ({ onLoginClick, onSignupClick }: NavbarProps) => {
             </button>
           )}
           <a href="#" className="flex items-center space-x-2">
-            <span className="text-3xl font-bold text-gradient">نجد</span>
+            <span className="text-3xl font-bold text-gradient">نجيد</span>
           </a>
 
           {!isMobile && (
