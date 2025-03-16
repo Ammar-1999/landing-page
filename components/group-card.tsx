@@ -28,11 +28,11 @@ export default function GroupCard({ group }: GroupCardProps) {
 
   return (
     <Link href={`/chat/${group.id}`} className="rounded-md">
-      <Card className="h-full transition-all hover:shadow-md hover:border-primary/50">
+      <Card className="h-full flex flex-col transition-all hover:shadow-md hover:border-primary/50">
         <CardHeader>
           <CardTitle>{group.name}</CardTitle>
         </CardHeader>
-        <CardContent>
+        <CardContent className="flex flex-col flex-1 justify-between">
           <p className="text-muted-foreground mb-4">{group.description}</p>
           <div className="flex flex-wrap gap-2">
             {group.agents.map((agent) => (
@@ -42,7 +42,7 @@ export default function GroupCard({ group }: GroupCardProps) {
             ))}
           </div>
         </CardContent>
-        <CardFooter className="text-sm text-muted-foreground flex items-center gap-2">
+        <CardFooter className="text-sm mt-auto text-muted-foreground flex items-center gap-2">
           <Clock className="h-4 w-4" />
           <span>نشط {group.lastActive}</span>
         </CardFooter>
