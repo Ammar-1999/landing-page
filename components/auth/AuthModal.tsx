@@ -36,7 +36,7 @@ const AuthModal = ({ triggerType, isOpen, onOpenChange, children }: AuthModalPro
       <DialogContent className="sm:max-w-[425px] rtl">
         <DialogHeader>
           <DialogTitle className="text-center text-xl font-semibold">
-            مرحباً بك في سمارت تيم
+            مرحباً بك في نجد
           </DialogTitle>
         </DialogHeader>
         <Tabs defaultValue={triggerType} className="w-full">

@@ -25,7 +25,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Brand section */}
           <div className="space-y-4">
-            <h3 className="text-xl font-bold text-gradient">سمارت تيم</h3>
+            <h3 className="text-xl font-bold text-gradient">نجد</h3>
             <p className="text-sm text-foreground/70 max-w-xs mb-4">
               فريق الذكاء الاصطناعي الشخصي الذي يساعدك على العمل بشكل أكثر ذكاءً، ويجمع بين وكلاء الذكاء الاصطناعي المتخصصين لتقديم نتائج استثنائية.
             </p>
@@ -83,7 +83,7 @@ const Footer = () => {
         
         <div className="mt-12 pt-6 border-t border-border/20 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <div className="text-sm text-foreground/60">
-            © {currentYear} سمارت تيم. جميع الحقوق محفوظة.
+            © {currentYear} نجد. جميع الحقوق محفوظة.
           </div>
         </div>
       </div>
