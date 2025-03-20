@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Menu, X } from "lucide-react";
+import BigLogo from "../icons/BigLogo";
 
 interface NavbarProps {
   onLoginClick: () => void;
@@ -52,7 +53,7 @@ const Navbar = ({ onLoginClick, onSignupClick }: NavbarProps) => {
             </button>
           )}
           <a href="#" className="flex items-center space-x-2">
-            <span className="text-3xl font-bold text-gradient">نجيد</span>
+            <BigLogo width={120} />
           </a>
 
           {!isMobile && (

@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Facebook, Twitter, Linkedin, Instagram, Github } from "lucide-react";
+import BigLogo from "../icons/BigLogo";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -25,7 +26,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Brand section */}
           <div className="space-y-4">
-            <h3 className="text-xl font-bold text-gradient">نجيد</h3>
+          <BigLogo width={50} />
+
             <p className="text-sm text-foreground/70 max-w-xs mb-4">
               فريق الذكاء الاصطناعي الشخصي الذي يساعدك على العمل بشكل أكثر ذكاءً، ويجمع بين وكلاء الذكاء الاصطناعي المتخصصين لتقديم نتائج استثنائية.
             </p>
